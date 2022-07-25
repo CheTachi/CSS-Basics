@@ -1,11 +1,63 @@
 <DOCTYPE html>
 <html>
 	<head>
-	
+
 		<link rel="stylesheet" href="styles.css" />
+<!--Tag selctors: slecetor based on the name of the element-->
+<style>
+	img {
+		border: solid 1px #777;
+	}
+</style>
+<!--Class Selector: Target elements based on the "class" of the elements.
+You can apply the same class name(label) to multiple elements. So you
+can have multiple divs, but the style would apply to only those with the
+".tutorial" class name in this example. -->
+<style>
+	.tutorial {
+		border: solid 1px #777;
+	}
+</style>
+<!--ID Selector: Use this when you want to target an element specifically
+ by name. This is to be used an a unique identity. -->
+<style>
+	#tutorial-1 {
+		background-color: #eee;
+	}
+	#tutorial-2 {
+		background-color: #fff;
+	}
+</style>
 
 	</head>
+	<!--Using the stylesheet will let the html page use the
+	element style rules from the styles.css page for styling.
+	But items listed on this page under style will override
+the style sheet rules. -->
+
 	<body>
-		<h1>Title</h1>
+<!--In this example the 2 divisions share the same class,
+but they each have their own indivial "id"-->
+		<h1>Introduction to CSS</h1>
+		<p>These tutorials teach you CSS.</p>
+<!-- division 1-->
+		<div class="tutorial" id="tutorial-1">
+			<!--subheading-->
+			<h2>Tutorial 1<h2>
+			<!--image-->
+			<img src="http://via.placeholder.com/150" />
+			<!--label inside a paragragh -->
+			<p>To begin with tutorial 1...</p>
+		</div>
+<!--division 2-->
+		<div class="tutorial" id="tutorial-2">
+			<!--subheading-->
+			<h2>Tutorial 2</h2>
+			<!--image-->
+			<img src="http://viaplaveholder.com/100" />
+			<!--label inside a paragraph-->
+			<p>To begin with tutorial 2...</p>
+		</div>
+
 	</body>
 </html>
