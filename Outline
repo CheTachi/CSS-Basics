@@ -4,7 +4,11 @@
 <head>
 </head>
   <style>
-  
+  // add background color
+    div {
+        background-color:  #39f;
+        color:  #fff;
+    }
   </style>
 <body>
   <div>Hello World</div>
