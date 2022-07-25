@@ -3,14 +3,81 @@
 <html>
 <head>
 </head>
+<!-- You can add "style rules" to the elements by adding this into the style element. -->
+  
+
+<!-- Style Rule Example:
+  This rule will add a background color rule to the div element -->
   <style>
-  // add background color
     div {
         background-color:  #39f;
         color:  #fff;
     }
   </style>
-<body>
-  <div>Hello World</div>
+<!--Style Rule Example:
+ This rule will add color to the text of the h1 element --> 
+  <style>
+    h1 {
+      color:  #39f;
+    }
+  </style>
+<!-- Cascading Rule:
+  The last rule wins. So, with the following duo the lower h1 rule will overrule the first h1 rule due to the nature of the cascading style sheets. Which ever rule is last the browser will run. -->
+  <style>
+    h1 {
+      color:  #39f;
+    }
+    h1 {
+      color:  #777;
+    }
+  </style>
+<!-- Specificity:
+ In this example the .heading is a "Class Rule". A Class Rule with win over an element Rule. This is because the specificity is more defined to this specific element. All h1 would have the #777, the the h1 elements with a class of heading are more defined by the .heading rule and would overrule the h1 style rule ever though the h1 is after the heading rule -->
+  <style>
+    .heading {
+      color:  #38f;
+    }
+    h1 {
+      color: #777;
+    }
+  </style>
+  <!-- Inheritance:
+  Some style properties are inherited and some are not. In this example the body has a background color rule for the body, in doing so the h1 background will inherit the background color from the body style rule(parent), unless you add a lower background color element for the h1.  -->
+  <style>
+    body {
+      background-color: #ccc;
+    }
+    h1 {
+      background-color:  #fff;
+    }
+  </style>
+  <!-- Some properties do not inherit.
+  This example has a dimensional property that does NOT inherit, like width. 
+
+  In this example the div would still cover 100%, because the change to width in the main element style rule would NOT be inherited by the div element. 
+
+  The div element would need to have its own style rule set up.  -->
+  <style>
+    body {
+      background-color:  #eee;
+    }
+
+    main {
+      background-color:  #ccc;
+      width:  50%;
+    }
+
+    div {
+      background-color:  #fff;
+    }
+
+  </style>
+
+  <body>
+    <h1 class="heading">Title</h1>
+<!-- This is an example of putting the style rule directle in the line of code it is to be used for. This is a tedious use of styling and should only be used sparingly. As it makes editing changes quickly inpossible. 
+-->
+    <h2 style="color: #39f:">Inline Style Example</h2>
+      <div>Hello World</div>
   </body>
-  </html>
+</html>
