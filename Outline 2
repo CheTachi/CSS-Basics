@@ -28,7 +28,59 @@ can have multiple divs, but the style would apply to only those with the
 		background-color: #fff;
 	}
 </style>
+<!--Attribute Selectors: Target elements on the page by source value.
+-->
+<style>
+	img[src=["http://via.placeholder.com/150"]
+	{
+		border: solid 3px #39f;
+	}
+</style>
+<!--List Selectors: Allows you to target more than one element at a time
+for silimar style changes.-->
+<style>
+		h1, h2 {
+		color: #39f;
+	}
+	.tutorial, h1 {
+		border: solid 1px #ccc;
+	}
+</style>
+<!--Combinators: Target children elements and add style specifically for
+ them. In this example the style will own change the paragraph element of
+ the ".tutorial" class-->
+<style>
+		.tutorial > p {
+				font-size: 1.5em;
+		}
+</style>
+<!--Display property: A div takes up a full block of space.
+1.) So the first div style below is taking up the full block. So 2 divs
+would render one on each line.(one below the over)
+2.) The second div style (inline)below has collapsed to fit the space that they
+need to fit in the window. So 2 div would render next to each other.
+3.) The thrid div style (inline-block) will both appear inline stacked next to
+each other. This lets you have more freedom the style both width and height.-->
+	
+<style>
+	div {
+			width: 100px;
+			border: solid 1px #333;
+	}
 
+	div {
+			display: inline;
+			width: 100px;
+			border: solid 1px #333;
+	}
+
+	div {
+			display: inline-block;
+			width: 100px;
+			border: solid 1px #333;
+	}
+
+</style>
 	</head>
 	<!--Using the stylesheet will let the html page use the
 	element style rules from the styles.css page for styling.
