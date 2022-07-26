@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Columns with float:
+  With this example we have a div with a class name of columns.This is a
+  contianer class so it was given a width of 100% and a border to see the
+  space. It is taking up 100% of the container.
+
+witht he second set of rules, we are styling the div within the .columns
+classed div. Each div is set to take up half of the container and float
+to be next to each other.
+ -->
+  <style>
+    .columns {
+        width: 100%;
+        border: solid 1px #ccc;
+    }
+
+    .columns > div {
+        width: 50%;
+        border: solid 1 px #ddd;
+        float: left;
+    }
+  </style>
+<!--In this example the information is the same as above, but the width
+of the divs within the column class now has a listing of 49%. This allows
+the 2 div to sit side by side with the float listed. This also has a
+shortcoming due to the gap you will see to the right of the 2 divs in
+the 1% not used to allow the brower to move them together on the same
+container. See the thrid option below for a better option using flexbox.-->
+  <style>
+  .columns {
+      width: 100%;
+      border: solid 1px #ccc;
+  }
+
+  .columns > div {
+      width: 49%;
+      border: solid 1 px #ddd;
+      float: left;
+  }
+  </style>
+<!--Flexbox Example:
+By saying flex equals "1" we are asking the browser to allow each div to
+take up one portion of the container. This fully fills 100% of the container
+without wasting space or having a gap.
+-->
+  <style>
+    .columns {
+      border: solid 1px #39f;
+      display: flex;
+    }
+
+    .columns > div {
+      border: solid 1 px #ccc;
+      flex: 1;
+    }
+  </style>
+<!--This example makes the divs have different sizes within the container.
+The browser will use this code to give columns 1 and 3 a single portion ,
+but it will register the column 2 as 2 portions.
+-->
+  <style>
+    .columns {
+      border: solid 1px #39f;
+      display: flex;
+    }
+
+    .columns > div {
+      border: solid 1 px #ccc;
+      flex: 1;
+    }
+
+    .columns > div:nth-of-type(2) {
+      flex: 2;
+    }
+  </style>
+
+
+  </head>
+  <body>
+    <div class="columns">
+    <div>Column 1</div>
+    <div>Column 2</div>
+    <div>Column 3</div>
+  </div>
+    <a ref="https://app.pluralsight.com/course-player?clipId=77e70243-f20a-4233-9193-c6b7c7baf895" />
+  </body>
+</html>

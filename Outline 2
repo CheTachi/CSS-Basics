@@ -1,4 +1,4 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html>
 	<head>
 
@@ -31,7 +31,7 @@ can have multiple divs, but the style would apply to only those with the
 <!--Attribute Selectors: Target elements on the page by source value.
 -->
 <style>
-	img[src=["http://via.placeholder.com/150"]
+	img src=["http://via.placeholder.com/150"]
 	{
 		border: solid 3px #39f;
 	}
@@ -61,7 +61,7 @@ would render one on each line.(one below the over)
 need to fit in the window. So 2 div would render next to each other.
 3.) The thrid div style (inline-block) will both appear inline stacked next to
 each other. This lets you have more freedom the style both width and height.-->
-	
+
 <style>
 	div {
 			width: 100px;
